@@ -10,6 +10,8 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {useState} from 'react';
+import { MyFavourite} from 'milibreria'
+import { MyFavouriteBorder} from 'milibreria'
 
 function Testimonio({ name, country, profession,alt, description, imageUrl, imageSize }) {
   const [data, setData] = useState(false);

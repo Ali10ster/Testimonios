@@ -42,6 +42,7 @@ function App() {
                     name={p.name}
                     country={p.country}
                     profession={p.profession}
+                    alt={p.alt}
                     description={p.description}
                     imageUrl={p.imgeUrl}
                     imageSize={p.imgeUrl}
