@@ -10,14 +10,19 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {useState} from 'react';
-import { MyFavourite} from 'milibreria'
-import { MyFavouriteBorder} from 'milibreria'
+import {AlisterMM} from 'milibreria';
+import { MyCustomButton } from 'milibreria';
+import {MyFavourite} from 'milibreria';
+import {MyFavouriteBorder} from 'milibreria';
 
 function Testimonio({ name, country, profession,alt, description, imageUrl, imageSize }) {
   const [data, setData] = useState(false);
   const handleChange = () => {
     setData(data => !data);
   };
+  const handleShowName = () => {
+    alert(name + ' me pillaste');
+  }
 
   return (
     <>
@@ -41,11 +46,19 @@ function Testimonio({ name, country, profession,alt, description, imageUrl, imag
                 {description}
               </Typography>
             </CardContent>
+            <AlisterMM></AlisterMM>
           </CardActionArea>
           <CardActions>
             <IconButton onClick={handleChange}>
-              {data ? <FavoriteBorderIcon />:<FavoriteIcon color='error' />}
+              {data ? <MyFavourite iconColor='primary' />:<MyFavouriteBorder iconColor='primary'/>}
             </IconButton>
+            <MyCustomButton 
+            text='¿Cómo me llamo?'
+            txtcolor='black'
+            bgcolor= 'blue'
+            borderColor='white'
+            borderWidth="medium"
+            size="medium" onClick={handleShowName}></MyCustomButton>
           </CardActions>
         </Card>
       </div>
